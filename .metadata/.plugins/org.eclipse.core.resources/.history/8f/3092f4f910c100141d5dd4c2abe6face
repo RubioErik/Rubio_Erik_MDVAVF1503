@@ -1,0 +1,28 @@
+var win = Ti.UI.createWindow({
+	backgroundColor: "#f9f"
+});
+var name = Ti.UI.createLabel({
+	color: "#fff"
+	text: "Company Name: "
+});
+
+var sym = Ti.UI.createLabel({
+	color: "#fff"
+	
+});
+var hi = Ti.UI.createLabel({
+	color: "#fff"
+	
+});
+var low = Ti.UI.createLabel({
+	color: "#fff"
+	
+});
+var buildUi = function(obj){
+	console.log(obj);
+	name.text = "Company Name: " + obj.name
+	win.add(name);
+	win.open();
+	
+};
+exports.buildUi = buildUi;

@@ -1,0 +1,10 @@
+var win = Ti.UI.createWindow({
+	backgroundColor: "#f9f"
+});
+
+var buildUi = function(obj){
+	console.log(obj);
+	
+	
+};
+exports.buildUi = buildUi;

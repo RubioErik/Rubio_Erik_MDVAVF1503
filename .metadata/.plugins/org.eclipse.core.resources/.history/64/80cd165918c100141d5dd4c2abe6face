@@ -1,0 +1,60 @@
+var win = Ti.UI.createWindow({
+	backgroundColor: "#f9f",
+	layout: "vertical"
+});
+var city = Ti.UI.createLabel({
+	color: "#fff",
+	top: 40
+});
+
+var state = Ti.UI.createLabel({
+	color: "#fff",
+	top: 10
+	
+});
+var condition = Ti.UI.createLabel({
+	color: "#fff",
+	top: 10
+	
+	
+});
+var  Fah = Ti.UI.createLabel({
+	color: "#fff",
+	top: 10
+	
+});
+var  Cel = Ti.UI.createLabel({
+	color: "#fff",
+	top: 10
+	
+});
+var  wMph = Ti.UI.createLabel({
+	color: "#fff",
+	top: 10
+	
+});
+var  wTemp= Ti.UI.createLabel({
+	color: "#fff",
+	top: 10
+	
+});
+var buildUi = function(obj){
+	console.log(obj);
+	city.text = obj.City;
+	state.text = obj.State;
+	condition.text = obj.Condition;
+	Fah.text = obj.Fahrenheit;
+	Cel.text = obj.Celsius;
+	wMph.text = obj.WindMph;
+	wTemp.text = obj.WindTemp;
+	win.add(wTemp);
+	win.add(wMph);
+	win.add(Cel);
+	win.add(Fah);
+	win.add(condition);
+	win.add(state);
+	win.add(city);
+	win.open();
+	
+};
+exports.buildUi = buildUi;

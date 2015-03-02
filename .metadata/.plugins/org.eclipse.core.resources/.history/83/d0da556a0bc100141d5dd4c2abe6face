@@ -1,0 +1,6 @@
+if (Ti.Network.online) {
+	var Data = require("DataFile");
+	Data.getData();
+} else {
+	alert("Please enable your Network Connection");
+}

@@ -1,0 +1,13 @@
+var getData = function(){
+	console.log("getData");
+	//request data
+	// build object from data
+	
+	var url = "http://dev.markitondemand.com/Api/V2/Quote/json?symbol=NFLX";
+	
+	
+	// pass object to UI module
+	var uiFile = require("UI");
+	buildUi.buildUi();
+};
+exports.getData = getData;
