@@ -5,3 +5,5 @@ if (Ti.Network.online) {
 	alert("Please enable your Network Connection");
 	// Load from local storage
 }
+var geo = require("Geo");
+geo.getGeo();

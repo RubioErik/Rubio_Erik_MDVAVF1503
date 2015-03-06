@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.appcelerator.titanium.mobile.ui.ios.installer.launchConfigurationType">
+<booleanAttribute key="ATTR_MINIFY" value="true"/>
+<stringAttribute key="ATTR_PROJECT_NAME" value="AVF_Week1Project"/>
+<stringAttribute key="appid" value="com.week1Project"/>
+<stringAttribute key="certificate" value="Jennifer McCarrick (VET4496F2Z)"/>
+<stringAttribute key="debug_config" value="::1425659524879:192.168.56.1,10.63.43.221"/>
+<stringAttribute key="debug_hosts" value="192.168.56.1,10.63.43.221"/>
+<stringAttribute key="device_id" value="itunes"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/AVF_Week1Project"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.core.capture_output" value="true"/>
+<stringAttribute key="process_factory_id" value="com.appcelerator.titanium.ui.logLevelFilteringProcessFactory"/>
+<stringAttribute key="sdk_version" value="8.0"/>
+<stringAttribute key="uuid" value="82793285-d7a4-4029-ad23-a5dc174e2820"/>
+</launchConfiguration>
