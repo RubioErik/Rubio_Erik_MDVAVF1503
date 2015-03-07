@@ -19,17 +19,23 @@ var getGeo = function() {
 	
 };
 getGeo();
-var getData = function() {
-	
+
+var getData = function(lat2, long2) {
+var key = "/233dc7213cacd6e6";
+
+var apData = "/conditions";
+
+var com = "http://api.wunderground.com/api";
+
+var url = com + key + apData + "/q/" + lat2 + "," + long2 +".json";
 	//request data
 	// build object from data
-	var url = "http://api.wunderground.com/api/233dc7213cacd6e6/conditions/q/28.592710494995117,-81.30516052246094.json";
+
 	var xhr = Ti.Network.createHTTPClient({
-		onload : function(weath) {
+		onload : function(e) {
 			var json = JSON.parse(this.responseText);
-			console.log(json.current_observation.display_location.city);
-			console.log(json.current_observation.weather);
-			 var weathObj = {
+			console.log(json);
+				 var weathObj = {
 			 	City : json.current_observation.display_location.city,
 			 	State : json.current_observation.display_location.state,
 			 	Condition: json.current_observation.weather,
@@ -43,7 +49,7 @@ var getData = function() {
 			 var uiFile = require("ui");
 	         uiFile.buildUi(weathObj);
 		},
-		onerror : function(weath) {
+		onerror : function(e) {
 			alert("Error: " + weath.error);
 		}
 	});

@@ -2,8 +2,14 @@
 AVF_Week1Project\:launchMode=run
 AVF_Week1Project\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.device.launchShortcut
 GeoLocation\:launchMode=run
-GeoLocation\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.0C782980-83FF-4E4F-A012-9266B2B7F92F
-LAST_LAUNCH_TIMESTAMP=1425662701807
+GeoLocation\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.FE7EABD1-B95D-4F42-921A-8EE297A045FE
+LAST_LAUNCH_TIMESTAMP=1425756361616
+Project3\:launchMode=run
+Project3\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.0C782980-83FF-4E4F-A012-9266B2B7F92F
+Rubio_Erik_Project1\:launchMode=run
+Rubio_Erik_Project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.FE7EABD1-B95D-4F42-921A-8EE297A045FE
+Rubio_Erik_Project2\:launchMode=run
+Rubio_Erik_Project2\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.run.device.launchShortcut.0b7a3e5b5f6ff000795a9acefd08a1cfe0c5a878
 autoLaunchShortcut=false
 eclipse.preferences.version=1
 preference.show.console.onError=true
