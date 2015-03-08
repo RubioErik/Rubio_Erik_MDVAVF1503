@@ -196,6 +196,19 @@ right: "10%"
 
 });
 
+var icon = Ti.UI.createImageView({
+
+image: "sun",
+
+height: "7%",
+
+width: "12%",
+
+top: "3%",
+
+
+});
+
 var lat2 = Ti.UI.createLabel({
 
 color : "Black"
@@ -226,7 +239,7 @@ var ltlng = function(arg1, arg2) {
 
 var gps = require("geo");
 
-console.log(arg1 + " Figure this out you idiot");
+console.log(arg1);
 
 console.log(arg2);
 
@@ -235,33 +248,38 @@ gps.getData(arg1, arg2);
 
 
 };
+var reLabel = Ti.UI.createLabel({
+	text: "Refresh",
+	color: "White"
+	
+});
+var refresh = Ti.UI.createView ({
+	bottom: "0.5%",
+	height: "5%",
+	width: "30%",
+	backgroundColor: "Black",
+	opacity: "0.7"
+	
+	
+});
 
-
+var elist = require("geo");
+refresh.addEventListener("click",elist.getGeo);
 
 win.add(mainView);
-
 win.add(fView);
-
 win.add(csView);
-
 win.add(conView);
-
 win.add(celView);
-
 win.add(wtmView);
-
 win.add(fah);
-
 win.add(con);
-
 win.add(csLabel);
-
 win.add(Cel);
-
 win.add(wtmLabel);
-
 win.add(ciView);
-
+win.add(icon);
+win.add(refresh);
+refresh.add(reLabel);
 exports.ltlng = ltlng;
-
 exports.buildUi = buildUi; 
