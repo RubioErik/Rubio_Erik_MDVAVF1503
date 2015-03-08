@@ -7,7 +7,7 @@ var getGeo = function() {
 		if (Ti.Platform.osname === "android") {
 			var lat = "37.78583526611328";
 			var lng = "-122.4064178466797";
-			UIR.buildUI(lat, lng);
+			UIR.ltlng(lat, lng);
 		} else {
 			var lat = e.coords.latitude;
 			var lng = e.coords.longitude;
@@ -21,13 +21,14 @@ var getGeo = function() {
 getGeo();
 
 var getData = function(lat2, long2) {
+
 var key = "/233dc7213cacd6e6";
 
 var apData = "/conditions";
 
 var com = "http://api.wunderground.com/api";
 
-var url = com + key + apData + "/q/" + lat2 + "," + long2 +".json";
+var url = com + key + apData + "/q/" +"28.5997222" + "," + "-81.3394444" +".json";
 	//request data
 	// build object from data
 
@@ -63,4 +64,4 @@ var url = com + key + apData + "/q/" + lat2 + "," + long2 +".json";
 
 /**/
 exports.getGeo = getGeo;
-exports.getData = getData; 
+exports.getData = getData;  

@@ -16,11 +16,6 @@ top : "18%",
 
 textAlign: "center",
 
-shadowColor: "Yellow",
-
-shadowOffset: {x:5, y:5},
-
-    shadowRadius: 3,
 
 font : {
 

@@ -3,6 +3,8 @@
 // populate UI 
 if (Ti.Network.online) {
 	var Data = require("geo");
+
+	
 	Data.getData();
 } else {
 	alert("Please enable your Network Connection");

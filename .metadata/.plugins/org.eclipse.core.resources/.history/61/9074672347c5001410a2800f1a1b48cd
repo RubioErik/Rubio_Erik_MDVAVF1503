@@ -1,0 +1,66 @@
+var getGeo = function() {
+	console.log("getGeo");
+	Ti.Geolocation.purpose = "Current location needed to update your weather";
+	Ti.Geolocation.getCurrentPosition(function(e){
+		var UIR = require("ui");
+		console.log(e);
+		if (Ti.Platform.osname === "android") {
+			var lat = "37.78583526611328";
+			var lng = "-122.4064178466797";
+			UIR.buildUI(lat, lng);
+		} else {
+			var lat = e.coords.latitude;
+			var lng = e.coords.longitude;
+			console.log("others: " + lat + ", " + lng);
+			UIR.ltlng(lat, lng);
+		}
+		console.log(lat, lng);
+	});
+	
+};
+getGeo();
+
+var getData = function(lat2, long2) {
+	var lati = lat2;
+	console.log(lati);
+var key = "/233dc7213cacd6e6";
+var apData = "/conditions";
+var com = "http://api.wunderground.com/api";
+var url = com + key + apData + "/q/" + lat2 + "," + long2 +".json";
+console.log(url);
+	//request data
+	// build object from data
+
+	var xhr = Ti.Network.createHTTPClient({
+		onload : function(e) {
+			var json = JSON.parse(this.responseText);
+			
+				 var weathObj = {
+			 	City : json,
+			 	State : json,
+			 	Condition: json,
+			 	Fahrenheit: json,
+			 	Celsius: json,
+			 	WindMph: json,
+			 	WindTemp: json
+			 	
+			 };
+			
+			 var uiFile = require("ui");
+	         uiFile.buildUi(weathObj);
+		},
+		onerror : function(e) {
+			alert("Error: " + weath.error);
+		}
+	});
+	
+	xhr.open("GET", url);
+	xhr.send();
+	// pass object to UI module
+	
+};
+
+
+/**/
+exports.getGeo = getGeo;
+exports.getData = getData; 
