@@ -16,3 +16,5 @@ autoLaunchShortcut=false
 eclipse.preferences.version=1
 preference.show.console.onError=true
 preference.studio.perspective.version=103
+redditAPI\:launchMode=run
+redditAPI\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.0C782980-83FF-4E4F-A012-9266B2B7F92F

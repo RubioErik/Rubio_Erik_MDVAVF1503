@@ -1,0 +1,8 @@
+var ui = require("ui");
+if (Ti.Network.online) {
+	var data = require("loc");
+	data.getData();
+} else {
+	alert("Please enable your Network Connection");
+	// Load from local storage
+}

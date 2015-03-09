@@ -1,0 +1,10 @@
+var save = function(apiData) {
+	console.log(apiData);
+	var db = Ti.Database.open("redditDB");
+	db.execute("CREATE TABLE IF NOT EXISTS redditTBL (id, INTEGER PRIMARY KEY, title TEXT, author TEXT, image TEXT)");
+	db.execute("DELETE FROM redditTBL");
+	db.execute("INSERT INTO redditTBL (title, author, image) VALUES (?,?,?,?,?,?)", apiData.symbol,apiData.name,apiData.price,apiData.high,apiData.low,apiData.time);
+	db.close();
+	read();
+};
+exports.save = save;

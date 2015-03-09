@@ -1,0 +1,7 @@
+var getData = function(){
+	var url = "api.reddit.com/r/aww";
+	var xhr = Ti.Network.createHTTPClient({
+		
+	},
+	
+};

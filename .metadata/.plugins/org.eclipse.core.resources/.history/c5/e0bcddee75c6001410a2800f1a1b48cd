@@ -1,0 +1,28 @@
+var win = Ti.UI.createWindow({
+	layout : "vertical",
+	backgroundColor : "#ccc"
+	
+});
+
+var title = Ti.UI.createLabel({
+	left: 0,
+	top: 25,
+	text: "Story Title: "
+	
+});
+var author = Ti.UI.createLabel({
+	left: 0,
+	top: 15,
+	text: "Story Author: "
+	
+});
+var image = createImageView({
+	left: 0,
+	top: 15,
+	
+});
+win.add(title);
+win.add(author);
+win.add(image);
+
+win.open();

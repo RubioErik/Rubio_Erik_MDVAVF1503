@@ -209,26 +209,22 @@ top: "3%",
 
 });
 
-var lat2 = Ti.UI.createLabel({
+var for1 = Ti.UI.createLabel({
+color: "White",
 
-color : "Black"
+top: "60%",
 
+textAlign: "center"
+	
 });
 
-var lng2 = Ti.UI.createLabel({
-
-color : "Black"
-
-
-
-});
 
 
 
 var buildUi = function(obj) {
 console.log(obj);
 csLabel.text = obj.City + ", " + obj.State;
-con.text =  "Overcast";
+con.text =  obj.Condition;
 fah.text =  obj.Fahrenheit + " F";
 Cel.text = obj.Celsius + " C";
 wtmLabel.text = "Wind Mph: " + obj.WindMph + " " + " Wind Temp: " + obj.WindTemp;
@@ -238,8 +234,6 @@ win.open();
 var ltlng = function(url) {
 
 var gps = require("geo");
-console.log(url);
-console.log(url);
 gps.getData(url);
 
 

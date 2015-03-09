@@ -40,6 +40,17 @@ var time = Ti.UI.createLabel({
 	text: "As Of: "
 	
 });
+
+var buildUI = function(dbObj) {
+	sym.text = "Stock Symbol: " + dbObj.sym;
+	name.text = "Stock Name: " + dbObj.name;
+	price.text = "Current Price: " + dbObj.price;
+	hi.text = "Price (High): " + dbObj.high;
+	lo.text = "Price (Low): " + dbObj.low;
+	time.text = "As Of: " + dbObj.time;
+	
+};
+exports.buildUI = buildUI;
 win.add(sym);
 win.add(name);
 win.add(price);
