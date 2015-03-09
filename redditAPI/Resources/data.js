@@ -1,13 +1,12 @@
 var read = function() { 
 	alert("read");
-	var db = Ti.Database.open("redditDB");
-	var rows = db.execute("SELECT title, author, image FROM redditTBL");
+	var db = Ti.Database.open("weatherDB");
+	var rows = db.execute("SELECT title, fah FROM weatherTBL");
 	var dbArray = [];
 	while (rows.isValidRow()){
 		var dbRow = {
 			title: rows.fieldByName("title"),
-			author: rows.fieldByName("author"),
-			image: rows.fieldByName("image")
+			fah: rows.fieldByName("fah")
 		};
 		dbArray.push(dbRow);
 		rows.next();
@@ -21,11 +20,11 @@ var read = function() {
 
 var save = function(apiData) {
 	console.log(apiData);
-	var db = Ti.Database.open("redditDB");
-	db.execute("CREATE TABLE IF NOT EXISTS redditTBL (id, INTEGER PRIMARY KEY, title TEXT, author TEXT, image TEXT)");
-	db.execute("DELETE FROM redditTBL");
-	for (i=0, j=apiData.length; i<j; i++) {
-	db.execute("INSERT INTO redditTBL (title, author, image) VALUES (?,?,?)", apiData[i].title,apiData[i].author,apiData[i].image);
+	var db = Ti.Database.open("weatherDB");
+	db.execute("CREATE TABLE IF NOT EXISTS weatherTBL (id, INTEGER PRIMARY KEY, title TEXT, fah TEXT)");
+	db.execute("DELETE FROM weatherTBL");
+	for (i=0, j= apiData.length; i<j; i++) {
+	db.execute("INSERT INTO weatherTBL (title, fah) VALUES (?,?)", apiData[i].title,apiData[i].fah);
 	}
 	db.close();
 	read();

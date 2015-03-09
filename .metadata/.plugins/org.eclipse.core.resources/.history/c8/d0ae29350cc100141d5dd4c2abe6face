@@ -1,7 +1,0 @@
-if (Ti.Network.online) {
-	var Data = require("DataFile");
-	DataFile.getData();
-} else {
-	alert("Please enable your Network Connection");
-	// Load from local storage
-}

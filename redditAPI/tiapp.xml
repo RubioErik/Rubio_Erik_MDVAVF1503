@@ -5,7 +5,7 @@
     <version>1.0</version>
     <publisher>Erik</publisher>
     <url>http://</url>
-    <description/>
+    <description>undefined</description>
     <copyright>2015 by Erik</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
@@ -16,10 +16,8 @@
     <ios>
         <plist>
             <dict>
-                <key>UISupportedInterfaceOrientations~iphone</key>
-                <array>
-                    <string>UIInterfaceOrientationPortrait</string>
-                </array>
+                <key>NSLocationWhenInUseUsageDescription</key>
+                <string>Please enable location services</string>
                 <key>UISupportedInterfaceOrientations~ipad</key>
                 <array>
                     <string>UIInterfaceOrientationPortrait</string>

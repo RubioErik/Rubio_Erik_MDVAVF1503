@@ -1,6 +1,0 @@
-var buildUi = function(){
-	console.log("buildUi");
-	
-};
-
-exports.buildUi = buildUi;

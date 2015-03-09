@@ -1,27 +1,63 @@
-var getData = function(){
-	var url = "http://api.reddit.com/r/aww";
+var getData = function(url) {
+	var variable = url;
+	console.log(url + "hi");
 	var xhr = Ti.Network.createHTTPClient({
-		onload: function() {
+		onload : function() {
 			var json = JSON.parse(this.responseText);
-			var redditArray = [];
-			var child = json.data.children;
-			for (i = 0, j = child.length; i < j; i++){
-				 var story = {
-				 	title: child[i].data.title,
-				 	author: child[i].data.author,
-				 	image: child[i].data.thumbnail
+			var weathArray = [];
+			var fore = json.forecast.simpleforecast.forecastday;
+		for (i = 0, j = fore.length; i < j; i++){
+				var week = {
+				 title: fore[i].date.weekday_short,
+				 fah: fore[i].high.fahrenheit,
+				 cel: fore[i].high.celsius
 				 };
-				 redditArray.push(story);
+				 console.log(fore[i].date.weeday_short);
+				 console.log(fore[i].high.fahrenheit);
+				 weathArray.push(week);
+				 console.log(weathArray + " hello ");
 			}
-			console.log(redditArray);
 			var data = require("data");
-			data.save(redditArray);
-		}, 
-		onerror : function(){ 
+			data.save(weathArray);
 		},
-		timeout : 5000
+		onerror : function() {
+			alert("Error: " + weath.error);
+		}
 	});
-xhr.open("GET", url);
-xhr.send();	
+
+	xhr.open("GET", url);
+	xhr.send();
+
 };
+
+
+var getGeo = function() {
+	console.log("getGeo");
+	Ti.Geolocation.purpose = "Current location needed to update your weather";
+	Ti.Geolocation.getCurrentPosition(function(e) {
+		console.log(e);
+		if (Ti.Platform.osname === "android") {
+			var lat = "37.78583526611328";
+			var lng = "-122.4064178466797";
+			var url = "http://api.wunderground.com/api" + "/233dc7213cacd6e6" + "/conditions/forecast" + "/q/" + lat + "," + lng + ".json";
+			getData(url);
+			
+		} else {
+			var lat = e.coords.latitude;
+			var lng = e.coords.longitude;
+			console.log("others: " + lat + ", " + lng);
+			var load = require("ui").ltlng;
+			console.log(load);
+			var url = "http://api.wunderground.com/api" + "/233dc7213cacd6e6" + "/conditions/forecast" + "/q/" + lat + "," + lng + ".json";
+			console.log(url);
+			getData(url);
+		}
+		console.log(lat, lng);
+	});
+
+};
+
+
+/**/
+exports.getGeo = getGeo;
 exports.getData = getData;
