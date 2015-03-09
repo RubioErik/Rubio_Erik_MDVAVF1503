@@ -1,0 +1,35 @@
+var loadNet = require("net").netcheck;
+var getGeo = function() {
+	console.log("getGeo");
+	Ti.Geolocation.purpose = "Current location needed to update your weather";
+	Ti.Geolocation.getCurrentPosition(function(e){
+		var UIR = require("ui");
+		console.log(e);
+		if (Ti.Platform.osname === "android") {
+			var lat = "37.78583526611328";
+			var lng = "-122.4064178466797";
+			var url = "http://api.wunderground.com/api"+ "/233dc7213cacd6e6"+ "/conditions"+ "/q/" +lat + "," + lng +".json";
+			UIR.ltlng(url);
+			
+		} else {
+			var lat = e.coords.latitude;
+			var lng = e.coords.longitude;
+			console.log("others: " + lat + ", " + lng);
+			var load = require("ui").ltlng;
+			console.log(load);
+			var url = "http://api.wunderground.com/api"+ "/233dc7213cacd6e6"+ "/conditions"+ "/q/" +lat + "," + lng +".json";
+			loadNet(url);
+			console.log(url);
+			UIR.ltlng(url);
+			
+		}
+		console.log(lat, lng);
+	});
+	
+};
+getGeo();
+
+
+
+/**/
+exports.getGeo = getGeo;

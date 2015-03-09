@@ -235,15 +235,12 @@ wtmLabel.text = "Wind Mph: " + obj.WindMph + " " + " Wind Temp: " + obj.WindTemp
 win.open();
 };
 
-var ltlng = function(arg1, arg2) {
+var ltlng = function(url) {
 
 var gps = require("geo");
-
-console.log(arg1);
-
-console.log(arg2);
-
-gps.getData(arg1, arg2);
+console.log(url);
+console.log(url);
+gps.getData(url);
 
 
 

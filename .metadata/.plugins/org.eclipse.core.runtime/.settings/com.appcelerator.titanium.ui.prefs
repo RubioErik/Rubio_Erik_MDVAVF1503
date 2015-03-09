@@ -1,6 +1,8 @@
 =run
 AVF_Week1Project\:launchMode=run
 AVF_Week1Project\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.0C782980-83FF-4E4F-A012-9266B2B7F92F
+AVF_Week2Project\:launchMode=run
+AVF_Week2Project\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.0C782980-83FF-4E4F-A012-9266B2B7F92F
 GeoLocation\:launchMode=run
 GeoLocation\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.0C782980-83FF-4E4F-A012-9266B2B7F92F
 LAST_LAUNCH_TIMESTAMP=1425756361616

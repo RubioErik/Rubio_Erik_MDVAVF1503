@@ -1,0 +1,5 @@
+var save = function() {
+	var db = Ti.Database.open("stockDB");
+	db.execute("CREATE TABLE IF NOT EXISTS stockTBL (id, INTEGER PRIMARY KEY, sym TEXT, name TEXT, price TEXT, hi TEXT, lo TEXT, time TEXT)");
+	
+};
