@@ -1,0 +1,34 @@
+var read = function() { 
+	alert("read");
+	var db = Ti.Database.open("weatherDB");
+	var rows = db.execute("SELECT title, fah, cel FROM weatherTBL");
+	var dbArray = [];
+	while (rows.isValidRow()){
+		var dbRow = {
+			title: rows.fieldByName("title"),
+			fah: rows.fieldByName("fah"),
+			cel: rows.fieldByName("cel")
+		};
+		dbArray.push(dbRow);
+		rows.next();
+	}
+	rows.close();
+	db.close();
+	console.log(dbArray);
+	var ui = require("ui");
+	ui.buildUI(dbArray);
+};
+
+var save = function(apiData) {
+	console.log(apiData);
+	var db = Ti.Database.open("weatherDB");
+	db.execute("CREATE TABLE IF NOT EXISTS weatherTBL (id, INTEGER PRIMARY KEY, title TEXT, fah TEXT, cel TEXT)");
+	db.execute("DELETE FROM weatherTBL");
+	for (i=0, j= apiData.length; i<j; i++) {
+	db.execute("INSERT INTO weatherTBL (title, fah, cel) VALUES (?,?,?)", apiData[i].title,apiData[i].fah,apiData[i].cel);
+	}
+	db.close();
+	read();
+};
+exports.save = save;
+exports.read = read;
