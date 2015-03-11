@@ -174,7 +174,6 @@ var trans1 = Ti.UI.createView({
 	height: 375,
 	width: 300,
 	backgroundColor: "Black",
-	opacity: "0.3"
 	
 });
 var trans2 = Ti.UI.createView({
@@ -183,7 +182,6 @@ var trans2 = Ti.UI.createView({
 	height: 375,
 	width: 300,
 	backgroundColor: "Black",
-	opacity: "0.3"
 	
 });
 var trans3 = Ti.UI.createView({
@@ -192,7 +190,6 @@ var trans3 = Ti.UI.createView({
 	height: 375,
 	width: 300,
 	backgroundColor: "Black",
-	opacity: "0.3"
 	
 });
 var trans4 = Ti.UI.createView({
@@ -201,7 +198,6 @@ var trans4 = Ti.UI.createView({
 	height: 375,
 	width: 300,
 	backgroundColor: "Black",
-	opacity: "0.3"
 	
 });
 var open2 = function(){
@@ -239,11 +235,6 @@ backView.addEventListener("click", back);
 	win.add(ciView);
 	win.add(refresh);
 	win.add(foreView);
-	win2.add(backView);
-	win2.add(trans1);
-	win2.add(trans2);
-	win2.add(trans3);
-	win2.add(trans4);
 	backView.add(backLabel);
 	foreView.add(foreLabel);
 	refresh.add(reLabel);
@@ -252,14 +243,18 @@ backView.addEventListener("click", back);
 };
 
 var buildUI = function(dbOutput) {
+	win2.add(backView);
+	win2.add(trans1);
+	win2.add(trans2);
+	win2.add(trans3);
+	win2.add(trans4);
 	
 	for (i=0, j=dbOutput.length; i < j; i++){
 		
 	var day = Ti.UI.createLabel({
 	color: "White",
 	textAlign: "center",
-	left: 185,
-	top: 350,
+	top: 225,
 	text: dbOutput[0].title,
 	font : {
     fontSize: 16,
@@ -272,8 +267,7 @@ var buildUI = function(dbOutput) {
 	var con1 = Ti.UI.createLabel({
 	color: "White",
 	textAlign: "center",
-	left: 155,
-	top: 375,
+	top: 250,
 	text: dbOutput[0].con,
 	font : {
     fontSize: 16,
@@ -286,8 +280,7 @@ var buildUI = function(dbOutput) {
 var day2 = Ti.UI.createLabel({
 	color: "White",
 	textAlign: "center",
-	left: 550,
-	top: 350,
+	top: 225,
 	text: dbOutput[1].title,
 	font : {
     fontSize: 16,
@@ -299,8 +292,7 @@ var day2 = Ti.UI.createLabel({
 	var con2 = Ti.UI.createLabel({
 	color: "White",
 	textAlign: "center",
-	left: 515,
-	top: 375,
+	top: 250,
 	text: dbOutput[1].con,
 	font : {
     fontSize: 16,
@@ -312,8 +304,7 @@ var day2 = Ti.UI.createLabel({
 });
 var day3 = Ti.UI.createLabel({
 	color: "White",
-	left: 185,
-	top: 775,
+	top: 225,
 	text: dbOutput[2].title,
 	font : {
     fontSize: 16,
@@ -325,8 +316,7 @@ var day3 = Ti.UI.createLabel({
 var con3 = Ti.UI.createLabel({
 	color: "White",
 	textAlign: "center",
-	left: 185,
-	top: 800,
+	top: 250,
 	text: dbOutput[2].con,
 	font : {
     fontSize: 16,
@@ -338,8 +328,7 @@ var con3 = Ti.UI.createLabel({
 });
 var day4 = Ti.UI.createLabel({
 	color: "White",
-	left: 550,
-	top: 775,
+	top: 225,
 	text: dbOutput[3].title,
 	font : {
     fontSize: 16,
@@ -351,8 +340,7 @@ var day4 = Ti.UI.createLabel({
 var con4 = Ti.UI.createLabel({
 	color: "White",
 	textAlign: "center",
-	left: 550,
-	top: 800,
+	top: 250,
 	text: dbOutput[3].con,
 	font : {
     fontSize: 16,
@@ -415,20 +403,22 @@ var con4 = Ti.UI.createLabel({
     fontFamily: "Helvetica"
 }
 });
-	win2.add(day);
-	win2.add(day2);
-	win2.add(day3);
-	win2.add(day4);
-	win2.add(con1);
-	win2.add(con2);
-	win2.add(con3);
-	win2.add(con4);
+	trans1.add(day);
+	trans2.add(day2);
+	trans3.add(day3);
+	trans4.add(day4);
+	trans1.add(con1);
+	trans2.add(con2);
+	trans3.add(con3);
+	trans4.add(con4);
 	//win2.add(fah);
 	//win2.add(cel);
 	//win2.add(con);
 	//win2.add(fah2);
 	//win2.add(cel2);
 	}
+	
+	
 	
 };
 

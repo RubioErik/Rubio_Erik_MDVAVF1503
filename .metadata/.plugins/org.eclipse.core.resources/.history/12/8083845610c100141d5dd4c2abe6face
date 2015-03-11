@@ -1,6 +1,0 @@
-var buildUi = function(obj){
-	console.log(obj);
-	
-	
-};
-exports.buildUi = buildUi;
