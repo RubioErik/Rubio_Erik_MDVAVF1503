@@ -1,0 +1,14 @@
+var Cloud = require("ti.cloud");
+function createUser(e) {
+    Cloud.Users.login({
+        username : "erubio12",
+        password : "12345",
+        password_confirmation : "pass1"
+    }, function(e) {
+        if (e.success) {
+            alert(e.users[0].username + " is logged in.");
+        } else {
+            alert("Error: " + e.message);
+        }
+    });
+}

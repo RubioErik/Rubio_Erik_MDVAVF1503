@@ -1,0 +1,18 @@
+var Cloud = require("ti.cloud");
+
+var loginCloud = function(e) {
+    Cloud.Users.login({
+        login : "erubio12",
+        password : "12345",
+    }, function(e) {
+        if (e.success) {
+        	console.log("success");
+            var api = require("api");
+            api.getGeo();
+        } else {
+            alert("Error: " + e.message);
+        }
+    });
+};
+exports.loginCloud = loginCloud;
+

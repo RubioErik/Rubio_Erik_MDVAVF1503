@@ -1,5 +1,5 @@
 var win = Ti.UI.createWindow({
-	backgroundImage : "background",
+	backgroundImage : "light",
 	
 	
 });
@@ -16,7 +16,7 @@ var win2 = Ti.UI.createWindow({
 
 var mainView = Ti.UI.createView({
 	backgroundColor: "white",
-	opacity: "0.7",
+	opacity: "0.2",
 	width: "100%",
 	height: "100%"
 	
@@ -57,7 +57,7 @@ backgroundColor: "#FF3939",
 opacity: "0.7",
 Width: 300,
 height: 300,
-top: "10%",
+top: 50,
 borderRadius: 150
 });
 
@@ -66,7 +66,7 @@ backgroundColor: "Black",
 opacity: "0.7",
 Width: 200,
 height: 200,
-top: 500,
+top: 370,
 borderRadius: 100
 });
 
@@ -75,8 +75,8 @@ backgroundColor: "Black",
 opacity: "0.7",
 Width: 200,
 height: 200,
-top: 400,
-left: 50,
+top: 250,
+left: 30,
 borderRadius: 100
 });
 
@@ -85,8 +85,8 @@ backgroundColor: "#4B7CFF",
 opacity: "0.7",
 Width: 200,
 height: 200,
-top: 400,
-right:50,
+top: 250,
+right:30,
 borderRadius: 100
 });
 
@@ -133,8 +133,26 @@ var over = Ti.UI.createImageView({
 	top: 40
 	
 });
-
-
+var right = Ti.UI.createView({
+	backgroundColor: "black",
+	opacity: "0.7",
+	width: 200,
+	height: 250,
+	top: 450,
+	right: 30,
+	borderRadius: 30
+	
+});
+var left = Ti.UI.createView({
+	backgroundColor: "black",
+	opacity: "0.7",
+	width: 200,
+	height: 250,
+	top: 450,
+	left: 30,
+	borderRadius: 30
+	
+});
 
 var for1 = Ti.UI.createLabel({
 color: "White",
@@ -404,6 +422,8 @@ refresh.addEventListener("click",elist.getGeo);
 	win.add(csView);
 	win.add(conView);
 	win.add(celView);
+	win.add(right);
+	win.add(left);
 	fView.add(fah);
 	conView.add(con);
 	conView.add(cloudy1);
