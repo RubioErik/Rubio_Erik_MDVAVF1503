@@ -35731,3 +35731,100 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/Erik/.ec
 !MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
 !SUBENTRY 1 org.eclipse.ui 2 0 2015-03-11 05:44:10.490
 !MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+
+!ENTRY com.aptana.index.core 4 0 2015-03-13 11:22:47.858
+!MESSAGE (Build 3.4.1.201410281727) [ERROR]  Unexpected byte value '-65' at index 1, reading string of length 23. Read so far: '                      '. Possibly corrupt index file: '/Users/Erik/Desktop/Rubio_Erik_MDVAVF1503/.metadata/.plugins/com.aptana.index.core/1840729502.index'
+!STACK 0
+java.io.UTFDataFormatException: Unexpected byte value '-65' at index 1, reading string of length 23. Read so far: '                      '. Possibly corrupt index file: '/Users/Erik/Desktop/Rubio_Erik_MDVAVF1503/.metadata/.plugins/com.aptana.index.core/1840729502.index'
+	at com.aptana.internal.index.core.DiskIndex.readString(DiskIndex.java:1502)
+	at com.aptana.internal.index.core.DiskIndex.readChunk(DiskIndex.java:1226)
+	at com.aptana.internal.index.core.DiskIndex.readAllDocumentNames(DiskIndex.java:1015)
+	at com.aptana.internal.index.core.DiskIndex.mergeWith(DiskIndex.java:867)
+	at com.aptana.index.core.Index.save(Index.java:698)
+	at com.aptana.index.core.Index.save(Index.java:671)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildEnding(IndexBuildParticipant.java:84)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildEnding(LazyBuildParticipant.java:67)
+	at com.aptana.editor.common.text.reconciler.CommonReconcilingStrategy.runParticipants(CommonReconcilingStrategy.java:341)
+	at com.aptana.editor.common.text.reconciler.CommonReconcilingStrategy.reconcile(CommonReconcilingStrategy.java:277)
+	at com.aptana.editor.common.text.reconciler.CommonReconcilingStrategy.reconcile(CommonReconcilingStrategy.java:235)
+	at com.aptana.editor.common.text.reconciler.CommonReconcilingStrategy.fullReconcile(CommonReconcilingStrategy.java:477)
+	at com.aptana.editor.common.text.reconciler.CommonReconciler.process(CommonReconciler.java:162)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY com.aptana.index.core 4 0 2015-03-13 11:22:47.861
+!MESSAGE (Build 3.4.1.201410281727) [ERROR]  Unexpected byte value '-65' at index 1, reading string of length 23. Read so far: '                      '. Possibly corrupt index file: '/Users/Erik/Desktop/Rubio_Erik_MDVAVF1503/.metadata/.plugins/com.aptana.index.core/1840729502.index'
+!STACK 0
+java.io.UTFDataFormatException: Unexpected byte value '-65' at index 1, reading string of length 23. Read so far: '                      '. Possibly corrupt index file: '/Users/Erik/Desktop/Rubio_Erik_MDVAVF1503/.metadata/.plugins/com.aptana.index.core/1840729502.index'
+	at com.aptana.internal.index.core.DiskIndex.readString(DiskIndex.java:1502)
+	at com.aptana.internal.index.core.DiskIndex.readChunk(DiskIndex.java:1226)
+	at com.aptana.internal.index.core.DiskIndex.readAllDocumentNames(DiskIndex.java:1015)
+	at com.aptana.internal.index.core.DiskIndex.mergeWith(DiskIndex.java:867)
+	at com.aptana.index.core.Index.save(Index.java:698)
+	at com.aptana.index.core.Index.save(Index.java:671)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildEnding(IndexBuildParticipant.java:84)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildEnding(LazyBuildParticipant.java:67)
+	at com.aptana.editor.common.text.reconciler.CommonReconcilingStrategy.runParticipants(CommonReconcilingStrategy.java:341)
+	at com.aptana.editor.common.text.reconciler.CommonReconcilingStrategy.reconcile(CommonReconcilingStrategy.java:277)
+	at com.aptana.editor.common.text.reconciler.CommonReconcilingStrategy.reconcile(CommonReconcilingStrategy.java:235)
+	at com.aptana.editor.common.text.reconciler.CommonReconcilingStrategy.fullReconcile(CommonReconcilingStrategy.java:477)
+	at com.aptana.editor.common.text.reconciler.CommonReconciler.process(CommonReconciler.java:162)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY com.aptana.index.core 4 0 2015-03-13 11:22:47.877
+!MESSAGE (Build 3.4.1.201410281727) [ERROR]  Unexpected byte value '-65' at index 1, reading string of length 23. Read so far: '                      '. Possibly corrupt index file: '/Users/Erik/Desktop/Rubio_Erik_MDVAVF1503/.metadata/.plugins/com.aptana.index.core/1840729502.index'
+!STACK 0
+java.io.UTFDataFormatException: Unexpected byte value '-65' at index 1, reading string of length 23. Read so far: '                      '. Possibly corrupt index file: '/Users/Erik/Desktop/Rubio_Erik_MDVAVF1503/.metadata/.plugins/com.aptana.index.core/1840729502.index'
+	at com.aptana.internal.index.core.DiskIndex.readString(DiskIndex.java:1502)
+	at com.aptana.internal.index.core.DiskIndex.readChunk(DiskIndex.java:1226)
+	at com.aptana.internal.index.core.DiskIndex.readAllDocumentNames(DiskIndex.java:1015)
+	at com.aptana.internal.index.core.DiskIndex.mergeWith(DiskIndex.java:867)
+	at com.aptana.index.core.Index.save(Index.java:698)
+	at com.aptana.index.core.Index.save(Index.java:671)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildEnding(IndexBuildParticipant.java:84)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildEnding(LazyBuildParticipant.java:67)
+	at com.aptana.editor.common.text.reconciler.CommonReconcilingStrategy.runParticipants(CommonReconcilingStrategy.java:341)
+	at com.aptana.editor.common.text.reconciler.CommonReconcilingStrategy.reconcile(CommonReconcilingStrategy.java:277)
+	at com.aptana.editor.common.text.reconciler.CommonReconcilingStrategy.reconcile(CommonReconcilingStrategy.java:235)
+	at com.aptana.editor.common.text.reconciler.CommonReconcilingStrategy.fullReconcile(CommonReconcilingStrategy.java:477)
+	at com.aptana.editor.common.text.reconciler.CommonReconciler.process(CommonReconciler.java:162)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY com.aptana.index.core 4 0 2015-03-13 11:22:48.807
+!MESSAGE (Build 3.4.1.201410281727) [ERROR]  Index error in readCategoryTable. 
+file = /Users/Erik/Desktop/Rubio_Erik_MDVAVF1503/.metadata/.plugins/com.aptana.index.core/1840729502.index 
+offset = 12,071 
+ size = 1,568,538,623
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.HashMap.<init>(HashMap.java:187)
+	at java.util.HashMap.<init>(HashMap.java:199)
+	at com.aptana.internal.index.core.DiskIndex.readCategoryTable(DiskIndex.java:1109)
+	at com.aptana.internal.index.core.DiskIndex.addQueryResults(DiskIndex.java:259)
+	at com.aptana.index.core.Index.query(Index.java:547)
+	at com.aptana.js.core.index.JSIndexQueryHelper.getModuleType(JSIndexQueryHelper.java:363)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:762)
+	at com.aptana.js.core.parsing.ast.JSInvokeNode.accept(JSInvokeNode.java:31)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processValues(JSSymbolTypeInferrer.java:606)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:359)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:420)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer$1.map(JSSymbolTypeInferrer.java:289)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer$1.map(JSSymbolTypeInferrer.java:1)
+	at com.aptana.core.util.CollectionsUtil.map(CollectionsUtil.java:432)
+	at com.aptana.core.util.CollectionsUtil.map(CollectionsUtil.java:466)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getScopeProperties(JSSymbolTypeInferrer.java:285)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processParseResults(JSFileIndexingParticipant.java:232)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.index(JSFileIndexingParticipant.java:105)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildFile(IndexBuildParticipant.java:132)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildFile(LazyBuildParticipant.java:72)
+	at com.aptana.core.build.UnifiedBuilder.buildFile(UnifiedBuilder.java:614)
+	at com.aptana.core.build.UnifiedBuilder.doBuildFiles(UnifiedBuilder.java:525)
+	at com.aptana.core.build.UnifiedBuilder.buildFiles(UnifiedBuilder.java:497)
+	at com.aptana.core.build.UnifiedBuilder.incrementalBuild(UnifiedBuilder.java:263)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:197)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
