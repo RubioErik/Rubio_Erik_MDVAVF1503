@@ -1,0 +1,431 @@
+var win = Ti.UI.createWindow({
+	backgroundImage : "background",
+	
+	
+});
+var win2 = Ti.UI.createWindow({
+	
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '50%' },
+        endPoint: { x: '100%', y: '50%' },
+        colors: [ { color: '#FF9D3A'}, { color: '#FF3A3A' }],
+    }
+	
+});
+
+var mainView = Ti.UI.createView({
+	backgroundColor: "white",
+	opacity: "0.5",
+	width: "100%",
+	height: "100%"
+	
+});
+var fah = Ti.UI.createLabel({
+color : "White",
+textAlign: "center",
+font : {
+    fontSize: 50,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+});
+
+var con = Ti.UI.createLabel({
+color : "White",
+textAlign: "center"
+});
+
+var Cel = Ti.UI.createLabel({
+color : "White",
+textAlign: "center"
+});
+
+
+var csLabel = Ti.UI.createLabel({
+color: "White",
+textAlign: "center"
+});
+
+var fView = Ti.UI.createView({
+backgroundColor: "Black",
+opacity: "0.7",
+Width: 300,
+height: 300,
+top: "10%",
+borderRadius: 150
+});
+
+var conView = Ti.UI.createView({
+backgroundColor: "Black",
+opacity: "0.7",
+Width: 200,
+height: 200,
+top: 500,
+borderRadius: 100
+});
+
+var csView = Ti.UI.createView({
+backgroundColor: "Black",
+opacity: "0.7",
+Width: 200,
+height: 200,
+top: 400,
+left: 50,
+borderRadius: 100
+});
+
+var celView = Ti.UI.createView({
+backgroundColor: "Black",
+opacity: "0.7",
+Width: 200,
+height: 200,
+top: 400,
+right:50,
+borderRadius: 100
+});
+
+var cloudy1 = Ti.UI.createImageView({
+	image: "cloudy",
+	width: 200,
+	height: 200,
+	top: 20
+	
+});
+
+var cloudy2 = Ti.UI.createImageView({
+	image: "cloudy",
+	width: 100,
+	height: 100,
+	top: 30
+	
+});
+var cloudy3 = Ti.UI.createImageView({
+	image: "cloudy",
+	width: 100,
+	height: 100,
+	top: 30
+	
+});
+var most = Ti.UI.createImageView({
+	Image: "mostly",
+	width: 100,
+	height: 100,
+	top: 30
+	
+});
+var over = Ti.UI.createImageView({
+	Image: "over",
+	width: 100,
+	height: 100,
+	top: 40
+	
+});
+
+
+
+var for1 = Ti.UI.createLabel({
+color: "White",
+top: "60%",
+textAlign: "center"
+});
+
+var reLabel = Ti.UI.createLabel({
+	text: "Refresh",
+	color: "White"
+	
+});
+var refresh = Ti.UI.createView ({
+	bottom: "0.5%",
+	height: "5%",
+	width: "30%",
+	backgroundColor: "Black",
+	opacity: "0.7",
+	borderRadius: 25
+	
+	
+});
+var foreLabel = Ti.UI.createLabel({
+	text: "Forecast >",
+	color: "White"
+	
+});
+var foreView = Ti.UI.createView ({
+	bottom: "0.5%",
+	right: "2%",
+	height: "5%",
+	width: "30%",
+	backgroundColor: "Black",
+	opacity: "0.7"
+	
+	
+});
+var backLabel = Ti.UI.createLabel({
+	text: "< Back",
+	color: "White"
+	
+});
+var backView = Ti.UI.createView({
+	bottom: "0.5%",
+	height: "5%",
+	width: "30%",
+	backgroundColor: "Black",
+	opacity: "0.7"
+	
+	
+});
+
+var trans1 = Ti.UI.createView({
+	bottom: 300,
+	height: 1,
+	width: 600,
+	backgroundColor: "Black",
+	opacity: "0.3"
+	
+});
+var fore1 = Ti.UI.createView({
+	bottom: 70,
+	left: 25,
+	height: 200,
+	width: 150,
+	borderRadius: 25,
+	backgroundColor: "Black",
+	opacity: "0.7"
+	
+});
+var fore2 = Ti.UI.createView({
+	bottom: 70,
+	left: 200,
+	height: 200,
+	width: 150,
+	borderRadius: 25,
+	backgroundColor: "Black",
+	opacity: "0.7"
+	
+});
+var fore3 = Ti.UI.createView({
+	bottom: 70,
+	right: 200,
+	height: 200,
+	width: 150,
+	borderRadius: 25,
+	backgroundColor: "Black",
+	opacity: "0.7"
+	
+});
+var fore4 = Ti.UI.createView({
+	bottom: 70,
+	right: 20,
+	height: 200,
+	width: 150,
+	borderRadius: 25,
+	backgroundColor: "Black",
+	opacity: "0.7"
+	
+});
+var open2 = function(){
+	win2.open();
+	
+};
+var back = function(){
+	win2.close();
+	
+};
+
+var buildUI2 = function(obj) {
+	csLabel.text = obj.City + ", " + obj.State;
+	con.text =  obj.Condition;
+	fah.text =  obj.Fahrenheit + " F";
+	Cel.text = obj.Celsius + " C";
+	
+var elist = require("api");
+refresh.addEventListener("click",elist.getGeo);
+	win.add(mainView);
+	win.add(trans1);
+	win.add(fore1);
+	win.add(fore2);
+	win.add(fore3);
+	win.add(fore4);
+	win.add(fView);
+	win.add(csView);
+	win.add(conView);
+	win.add(celView);
+	fView.add(fah);
+	conView.add(con);
+	conView.add(cloudy1);
+	celView.add(Cel);
+	csView.add(csLabel);
+	win.add(refresh);
+	backView.add(backLabel);
+	refresh.add(reLabel);
+	win.open();
+	
+};
+
+var buildUI = function(dbOutput) {
+	
+	for (i=0, j=dbOutput.length; i < j; i++){
+		
+	var day = Ti.UI.createLabel({
+	color: "White",
+	textAlign: "center",
+	top: 2,
+	text: dbOutput[0].title,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+
+});
+	var con1 = Ti.UI.createLabel({
+	color: "White",
+	textAlign: "center",
+	bottom : 60,
+	text: dbOutput[0].con,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+
+});
+var day2 = Ti.UI.createLabel({
+	color: "White",
+	textAlign: "center",
+	top: 2,
+	text: dbOutput[1].title,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+});
+	var con2 = Ti.UI.createLabel({
+	color: "White",
+	textAlign: "center",
+	bottom: 60,
+	text: dbOutput[1].con,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+
+});
+var day3 = Ti.UI.createLabel({
+	color: "White",
+	top: 2,
+	text: dbOutput[2].title,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+});
+var con3 = Ti.UI.createLabel({
+	color: "White",
+	textAlign: "center",
+	bottom: 60,
+	text: dbOutput[2].con,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+
+});
+var day4 = Ti.UI.createLabel({
+	color: "White",
+	top: 2,
+	text: dbOutput[3].title,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+});
+var con4 = Ti.UI.createLabel({
+	color: "White",
+	textAlign: "center",
+	bottom: 60,
+	text: dbOutput[3].con,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+
+});
+
+	var hFah1 = Ti.UI.createLabel({
+	color: "white",
+	left: 10,
+	bottom: 5,
+	text: dbOutput[0].fah + "/" + dbOutput[0].fah2,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+	var hCel1 = Ti.UI.createLabel({
+	color: "white",
+	right: 10,
+	bottom: 5,
+	text: dbOutput[0].cel + "/" + dbOutput.cel2,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+	var con = Ti.UI.createLabel({
+	color: "black",
+	top: 20,
+	text: dbOutput[i].con,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+   }
+});
+
+	
+	}
+	fore1.add(day);
+	fore2.add(day2);
+	fore3.add(day3);
+	fore4.add(day4);
+	fore1.add(con1);
+	fore2.add(con2);
+	fore3.add(con3);
+	fore4.add(con4);
+	fore1.add(cloudy2);
+	fore2.add(cloudy3);
+	fore3.add(most);
+	fore4.add(over);
+	fore1.add(hFah1);
+	fore1.add(hCel1);
+	
+};
+
+var ltlng = function(url) {
+console.log(url);
+var gps = require("api");
+gps.getData(url);
+};
+
+exports.ltlng = ltlng;
+exports.buildUI = buildUI;
+exports.buildUI2 = buildUI2;
