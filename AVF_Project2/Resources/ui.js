@@ -137,19 +137,19 @@ var right = Ti.UI.createView({
 	backgroundColor: "black",
 	opacity: "0.7",
 	width: 200,
-	height: 250,
-	top: 450,
-	right: 30,
-	borderRadius: 30
+	height: 200,
+	top: 500,
+	right: 50,
+	borderRadius: 20
 	
 });
 var left = Ti.UI.createView({
 	backgroundColor: "black",
 	opacity: "0.7",
 	width: 200,
-	height: 250,
-	top: 450,
-	left: 30,
+	height: 200,
+	top: 500,
+	left: 50,
 	borderRadius: 30
 	
 });
@@ -166,12 +166,13 @@ var reLabel = Ti.UI.createLabel({
 	
 });
 var refresh = Ti.UI.createView ({
+	right: "1%",
 	bottom: "0.5%",
 	height: "5%",
-	width: "30%",
+	width: "20%",
 	backgroundColor: "Black",
 	opacity: "0.7",
-	borderRadius: 25
+	borderRadius: 20
 	
 	
 });
@@ -404,11 +405,39 @@ celView.addEventListener('click', function() {
   celView.animate(a);
 });
 
+var elev = Ti.UI.createLabel({
+	color: "white"
+	
+});
+var hum = Ti.UI.createLabel({
+	color: "white"
+	
+});
+var time = Ti.UI.createLabel({
+	color: "white",
+	bottom: "0.5%"
+	
+});
+var elev2 = Ti.UI.createLabel({
+	color: "white",
+	top: 50,
+	text: "Elevation"
+	
+});
+var hum2 = Ti.UI.createLabel({
+	color: "white",
+	top: 50,
+	text: "Humidity"
+	
+});
 var buildUI2 = function(obj) {
 	csLabel.text = obj.City + ", " + obj.State;
 	con.text =  obj.Condition;
 	fah.text =  obj.Fahrenheit;
 	Cel.text = obj.Celsius ;
+	elev.text = obj.elevation;
+	hum.text = obj.humid;
+	time.text = obj.timestamp;
 	
 var elist = require("api");
 refresh.addEventListener("click",elist.getGeo);
@@ -425,11 +454,16 @@ refresh.addEventListener("click",elist.getGeo);
 	win.add(right);
 	win.add(left);
 	fView.add(fah);
+	win.add(time);
 	conView.add(con);
 	conView.add(cloudy1);
 	celView.add(Cel);
 	csView.add(csLabel);
 	win.add(refresh);
+	right.add(elev);
+	right.add(elev2);
+	left.add(hum2);
+	left.add(hum);
 	backView.add(backLabel);
 	refresh.add(reLabel);
 	win.open();

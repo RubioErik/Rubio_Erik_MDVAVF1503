@@ -14,7 +14,10 @@ var getData = function(url) {
 				Fahrenheit : json.current_observation.temp_f,
 				Celsius : json.current_observation.temp_c,
 				WindMph : json.current_observation.wind_mph,
-				WindTemp : json.current_observation.wind_degrees
+				WindTemp : json.current_observation.wind_degrees,
+				elevation: json.current_observation.observation_location.elevation,
+				humid: json.current_observation.relative_humidity,
+				timestamp: json.current_observation.observation_time
 
 			};
 			var uiFile = require("ui");
