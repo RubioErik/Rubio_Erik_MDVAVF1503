@@ -1,0 +1,32 @@
+var win = Ti.UI.createWindow({
+	fullscreen: true,
+	backgroundImage: "background"
+	
+});
+
+var buildUI = function(dbOutput) {
+	
+	for (i=0, j=dbOutput.length; i < j; i++){
+		
+var reg = Ti.UI.createLabel({
+	color: "white",
+	right: 15,
+	bottom: 15,
+	text: dbOutput[0].reg,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+	
+	}
+	
+	win.add(reg);
+	
+};
+
+
+win.open();
+exports.buildUI = buildUI;

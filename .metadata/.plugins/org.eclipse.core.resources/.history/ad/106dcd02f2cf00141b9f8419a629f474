@@ -1,0 +1,96 @@
+var win = Ti.UI.createWindow({
+	fullscreen: true,
+	backgroundColor: "black"
+	
+});
+
+var buildUI = function(dbOutput) {
+	
+	for (i=0, j=dbOutput.length; i < j; i++){
+		
+var title = Ti.UI.createLabel({
+	color: "white",
+	left: "10%",
+	top: "15%",
+	text: dbOutput[0].title,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});	
+
+var title2 = Ti.UI.createLabel({
+	color: "white",
+	right: "10%",
+	top: "15%",
+	text: dbOutput[1].title,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+
+var title3 = Ti.UI.createLabel({
+	color: "white",
+	right: "10%",
+	top: "35%",
+	text: dbOutput[2].title,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+var title4 = Ti.UI.createLabel({
+	color: "white",
+	right: "10%",
+	top: "15%",
+	text: dbOutput[1].title,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+		
+		
+		
+var reg = Ti.UI.createLabel({
+	color: "white",
+	left: "10%",
+	top: "20%",
+	text: dbOutput[0].reg,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+var reg2 = Ti.UI.createLabel({
+	color: "white",
+	right: "10%",
+	top: "15%",
+	text: dbOutput[1].reg,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+	
+	}
+	win.add(title2);
+	win.add(title);
+};
+
+
+win.open();
+exports.buildUI = buildUI;

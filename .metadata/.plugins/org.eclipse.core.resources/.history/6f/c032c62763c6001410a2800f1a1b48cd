@@ -1,4 +1,0 @@
-var getData = function(){
-	var url = "http://dev.markitondemand.com/Api/v2/Quote/json?symbol=NFLX";
-	
-};

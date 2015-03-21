@@ -1,9 +1,0 @@
-var getData = function(){
-	var url = "http://dev.markitondemand.com/Api/v2/Quote/json?symbol=NFLX";
-	var xhr = Ti.Network.createHTTPClient({
-		
-		
-	});
-	xhr.open("GET", url);
-	xhr.send();
-};

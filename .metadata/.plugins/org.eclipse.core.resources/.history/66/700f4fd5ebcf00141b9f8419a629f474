@@ -1,0 +1,45 @@
+var win = Ti.UI.createWindow({
+	layout: "vertical",
+	fullscreen: true,
+	backgroundImage: "background"
+	
+});
+
+var buildUI = function(dbOutput) {
+	
+	for (i=0, j=dbOutput.length; i < j; i++){
+		
+var reg = Ti.UI.createLabel({
+	color: "white",
+	right: "",
+	bottom: 15,
+	text: dbOutput[0].reg,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+var reg2 = Ti.UI.createLabel({
+	color: "white",
+	right: 15,
+	bottom: 15,
+	text: dbOutput[1].reg,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+	
+	}
+	
+	win.add(reg);
+	win.add(re2);
+};
+
+
+win.open();
+exports.buildUI = buildUI;

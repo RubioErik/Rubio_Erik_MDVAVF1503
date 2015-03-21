@@ -1,0 +1,263 @@
+var win = Ti.UI.createWindow({
+	fullscreen: true,
+	backgroundImage: "background"
+	
+});
+
+var buildUI = function(dbOutput) {
+	
+	for (i=0, j=dbOutput.length; i < j; i++){
+		
+	var day = Ti.UI.createLabel({
+	color: "White",
+	textAlign: "center",
+	top: 2,
+	text: dbOutput[0].title,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+
+});
+	var con1 = Ti.UI.createLabel({
+	color: "White",
+	textAlign: "center",
+	bottom : 60,
+	text: dbOutput[0].con,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+
+});
+var day2 = Ti.UI.createLabel({
+	color: "White",
+	textAlign: "center",
+	top: 2,
+	text: dbOutput[1].title,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+});
+	var con2 = Ti.UI.createLabel({
+	color: "White",
+	textAlign: "center",
+	bottom: 60,
+	text: dbOutput[1].con,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+
+});
+var day3 = Ti.UI.createLabel({
+	color: "White",
+	top: 2,
+	text: dbOutput[2].title,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+});
+var con3 = Ti.UI.createLabel({
+	color: "White",
+	textAlign: "center",
+	bottom: 60,
+	text: dbOutput[2].con,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+
+});
+var day4 = Ti.UI.createLabel({
+	color: "White",
+	top: 2,
+	text: dbOutput[3].title,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+});
+var con4 = Ti.UI.createLabel({
+	color: "White",
+	textAlign: "center",
+	bottom: 60,
+	text: dbOutput[3].con,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+
+
+});
+
+	var hFah1 = Ti.UI.createLabel({
+	color: "white",
+	left: 15,
+	bottom: 15,
+	text: dbOutput[0].fah + "/" + dbOutput[0].fah2,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+	var hFah2 = Ti.UI.createLabel({
+	color: "white",
+	left: 15,
+	bottom: 15,
+	text: dbOutput[1].fah + "/" + dbOutput[1].fah2,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+	var hFah2 = Ti.UI.createLabel({
+	color: "white",
+	left: 15,
+	bottom: 15,
+	text: dbOutput[1].fah + "/" + dbOutput[1].fah2,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+	var hFah3 = Ti.UI.createLabel({
+	color: "white",
+	left: 15,
+	bottom: 15,
+	text: dbOutput[2].fah + "/" + dbOutput[2].fah2,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+	var hFah4 = Ti.UI.createLabel({
+	color: "white",
+	left: 15,
+	bottom: 15,
+	text: dbOutput[3].fah + "/" + dbOutput[3].fah2,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+	var hCel1 = Ti.UI.createLabel({
+	color: "white",
+	right: 15,
+	bottom: 15,
+	text: dbOutput[0].cel + "/" + dbOutput[0].cel2,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+	var hCel2 = Ti.UI.createLabel({
+	color: "white",
+	right: 15,
+	bottom: 15,
+	text: dbOutput[1].cel + "/" + dbOutput[1].cel2,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+	var hCel3 = Ti.UI.createLabel({
+	color: "white",
+	right: 15,
+	bottom: 15,
+	text: dbOutput[2].cel + "/" + dbOutput[2].cel2,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+var hCel4 = Ti.UI.createLabel({
+	color: "white",
+	right: 15,
+	bottom: 15,
+	text: dbOutput[3].cel + "/" + dbOutput[3].cel2,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+	var con = Ti.UI.createLabel({
+	color: "black",
+	top: 20,
+	text: dbOutput[i].con,
+	font : {
+    fontSize: 16,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+   }
+});
+
+	
+	}
+	fore1.add(day);
+	fore2.add(day2);
+	fore3.add(day3);
+	fore4.add(day4);
+	fore1.add(con1);
+	fore2.add(con2);
+	fore3.add(con3);
+	fore4.add(con4);
+	fore1.add(cloudy2);
+	fore2.add(cloudy3);
+	fore3.add(most);
+	fore4.add(most2);
+	fore1.add(hFah1);
+	fore1.add(hCel1);
+	fore2.add(hFah2);
+	fore2.add(hCel2);
+	fore3.add(hFah3);
+	fore3.add(hCel3);
+	fore4.add(hFah4);
+	fore4.add(hCel4);
+	fore1.add(f1);
+	fore1.add(c1);
+	fore2.add(f2);
+	fore2.add(c2);
+	fore3.add(f3);
+	fore3.add(c3);
+	fore4.add(f4);
+	fore4.add(c4);
+};
+
+exports.buildUI = buildUI;
+win.open();

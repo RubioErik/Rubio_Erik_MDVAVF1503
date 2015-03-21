@@ -1,5 +1,0 @@
-// launch app 
-// get geo cordinates 
-// populate UI 
-
-var geo = require("geo");

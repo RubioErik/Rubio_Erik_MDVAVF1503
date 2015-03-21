@@ -1,0 +1,155 @@
+var win = Ti.UI.createWindow({
+	fullscreen: true,
+	backgroundColor: "black"
+	
+});
+
+var buildUI = function(dbOutput) {
+	
+	for (i=0, j=dbOutput.length; i < j; i++){
+		
+var title = Ti.UI.createLabel({
+	color: "white",
+	left: "10%",
+	top: "15%",
+	text: dbOutput[0].title,
+	font : {
+    fontSize: 14,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});	
+
+var title2 = Ti.UI.createLabel({
+	color: "white",
+	right: "10%",
+	top: "15%",
+	text: dbOutput[1].title,
+	font : {
+    fontSize: 12,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+
+var title3 = Ti.UI.createLabel({
+	color: "white",
+	left: "10%",
+	top: "45%",
+	text: dbOutput[2].title,
+	font : {
+    fontSize: 12,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+var title4 = Ti.UI.createLabel({
+	color: "white",
+	right: "10%",
+	top: "45%",
+	text: dbOutput[3].title,
+	font : {
+    fontSize: 12,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+var title5 = Ti.UI.createLabel({
+	color: "white",
+	left: "10%",
+	top: "75%",
+	text: dbOutput[4].title,
+	font : {
+    fontSize: 12,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});		
+var title6 = Ti.UI.createLabel({
+	color: "white",
+	right: "10%",
+	top: "75%",
+	text: dbOutput[5].title,
+	font : {
+    fontSize: 12,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});	
+
+		
+		
+var dist = Ti.UI.createLabel({
+	color: "white",
+	left: "10%",
+	top: "20%",
+	text: dbOutput[0].dist,
+	font : {
+    fontSize: 12,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+var dist2 = Ti.UI.createLabel({
+	color: "white",
+	right: "10%",
+	top: "20%",
+	text: dbOutput[1].dist,
+	font : {
+    fontSize: 12,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+var dist3 = Ti.UI.createLabel({
+	color: "white",
+	left: "10%",
+	top: "50%",
+	text: dbOutput[2].dist,
+	font : {
+    fontSize: 12,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+
+var dist4 = Ti.UI.createLabel({
+	color: "white",
+	right: "10%",
+	top: "50%",
+	text: dbOutput[3].dist,
+	font : {
+    fontSize: 12,
+    fontStyle: "bold",
+    fontFamily: "Helvetica"
+}
+	
+});
+
+	
+	}
+	
+	win.add(title6);
+	win.add(title5);
+	win.add(title4);
+	win.add(title3);
+	win.add(title2);
+	win.add(title);
+	win.add(dist);
+	win.add(dist2);
+	win.add(dist3);
+	win.add(dist4);
+};
+
+
+win.open();
+exports.buildUI = buildUI;
