@@ -52,7 +52,7 @@ var getGeo = function() {
 			var lat2 = e.coords.latitude;
 			var lng2 = e.coords.longitude;
 			console.log("others: " + lat2 + ", " + lng2);
-			var url = "http://api.mygasfeed.com/stations/radius/" + lat2 + "/" + lng2 + "/1/reg/distance/ff7syhp0hg.json";
+			var url = "http://api.mygasfeed.com/stations/radius/" + lat2 + "/" + lng2 + "/10/reg/distance/ff7syhp0hg.json";
 			console.log(url);
 			getData(url);
 		}
